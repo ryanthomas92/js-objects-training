@@ -13,6 +13,31 @@
   }
   ```
 
+*/
+var apple = "apple";
+
+function letterCount(string) {
+  var empty = {};
+  var letters = string.split("");
+
+  for (var i = 0; i < letters.length; i++) {
+    var currentLetter = letters[i];
+    console.log(empty[letters[i]]);
+
+    if (empty[currentLetter] === undefined) {
+      empty[currentLetter] = 1;
+    } else if(empty[currentLetter] !== undefined) {
+      empty[currentLetter] += 1;
+    }
+
+
+  }
+
+  return empty;
+}
+
+
+/*
   Bonuses
   - Make sure that lower case letters and upper case letters count for the same character.
   - Ignore spaces, special characters, and punctuation.
